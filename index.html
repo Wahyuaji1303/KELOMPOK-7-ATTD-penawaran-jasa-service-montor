@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Inovasi Service Motor ITS - Kelompok 7</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="fade-in">
+    <h1>🔧 Inovasi Service Motor ITS</h1>
+    <p>Departemen Teknik Mesin Industri - Institut Teknologi Sepuluh Nopember</p>
+  </header>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <ul>
+      <li><a href="#home">Beranda</a></li>
+      <li><a href="#paket">Paket Service</a></li>
+      <li><a href="#contact">Kontak</a></li>
+      <li><a href="#team">Tim Kami</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content fade-up">
+      <h2>Service Motor Profesional & Cepat 🚀</h2>
+      <p>Layanan panggilan langsung ke lokasi Anda atau datang ke bengkel kami di ITS!</p>
+      <button onclick="scrollToSection('contact')">Pesan Sekarang</button>
+    </div>
+  </section>
+
+  <!-- PAKET SERVICE -->
+  <section id="paket" class="section fade-in">
+    <h2>🧰 Paket Service Unggulan</h2>
+    <div class="paket-list">
+
+      <div class="paket-card">
+        <img src="cvt.jpeg" alt="CVT">
+        <h3>Service CVT</h3>
+        <p>Perawatan sistem CVT agar performa motor tetap optimal.</p>
+        <span class="price">Rp 150.000</span>
+      </div>
+
+      <div class="paket-card">
+        <img src="throttle body.jpg" alt="Throttle Body">
+        <h3>Throttle Body</h3>
+        <p>Pembersihan & kalibrasi throttle body agar tarikan gas responsif.</p>
+        <span class="price">Rp 130.000</span>
+      </div>
+
+      <div class="paket-card">
+        <img src="pengeriman.jpeg" alt="Pengiriman">
+        <h3>Pengiriman Motor</h3>
+        <p>Layanan antar-jemput motor langsung ke rumah Anda.</p>
+        <span class="price">Rp 100.000</span>
+      </div>
+
+      <div class="paket-card">
+        <img src="service rutin.jpeg" alt="Service Rutin">
+        <h3>Service Rutin</h3>
+        <p>Perawatan lengkap: oli, rem, CVT, dan kelistrikan.</p>
+        <span class="price">Rp 250.000</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM KONTAK -->
+  <section id="contact" class="section dark fade-in">
+    <h2>📞 Hubungi Kami</h2>
+    <form id="bookingForm">
+      <input type="text" id="nama" placeholder="Nama Anda" required>
+      <input type="text" id="lokasi" placeholder="Lokasi Anda (contoh: Surabaya Timur)" required>
+      <select id="jenisLayanan">
+        <option value="panggilan">Service Panggilan</option>
+        <option value="bengkel">Datang ke Bengkel ITS</option>
+      </select>
+      <textarea id="pesan" placeholder="Keluhan atau permintaan khusus..." rows="4"></textarea>
+      <button type="submit">Kirim Pesanan</button>
+    </form>
+    <p id="notif"></p>
+
+    <div class="map-container fade-up">
+      <h3>📍 Lokasi Bengkel Kami</h3>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.1727588540073!2d112.7905208747786!3d-7.552510273818784!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7f9b712d86c77%3A0x39aa8dd79d9a2e2f!2sDepartemen%20Teknik%20Mesin%20Industri%20ITS!5e0!3m2!1sid!2sid!4v1739760000000!5m2!1sid!2sid"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p><a href="https://maps.app.goo.gl/VeobGss5zhSFMwKU8?g_st=aw" target="_blank" class="maps-link">🔗 Lihat di Google Maps</a></p>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section id="team" class="section fade-up">
+    <h2>👨‍🔧 Tim Inovasi Kelompok 7</h2>
+    <div class="team-list">
+      <p>Wahyu Aji Artha Fauzi (2039221023)</p>
+      <p>Zaenuddin (2039221015)</p>
+      <p>Sendy Aryan Ruhi (2039221021)</p>
+      <p>Atsilah Rizky Nur Sahirah (2039221039)</p>
+      <p>Cahyaning Hanum Pertiwi (2039221045)</p>
+      <p>Nayla Rizky Aninda (2039221085)</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 Kelompok 7 ATTD - Departemen Teknik Mesin Industri ITS</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
