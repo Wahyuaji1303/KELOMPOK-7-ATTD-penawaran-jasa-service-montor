@@ -1,21 +1,21 @@
-/* 🌈 RESET & FONT */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
+  background: url("background.jpg") center/cover no-repeat fixed;
+  color: #fff;
 }
 
 /* HEADER */
 header {
   text-align: center;
-  background: #004aad;
-  color: white;
+  background: rgba(0, 74, 173, 0.9);
   padding: 1.5rem;
 }
 
 /* NAVIGATION */
 nav {
-  background: #002c6c;
+  background: rgba(0, 44, 108, 0.9);
   text-align: center;
 }
 nav ul {
@@ -31,7 +31,7 @@ nav a {
   color: white;
   text-decoration: none;
   font-weight: 600;
-  transition: color 0.3s;
+  transition: 0.3s;
 }
 nav a:hover {
   color: #ffcc00;
@@ -40,26 +40,20 @@ nav a:hover {
 /* HERO */
 .hero {
   position: relative;
-  background: url("background.jpg") center/cover no-repeat;
   height: 85vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  color: white;
-  overflow: hidden;
 }
-.hero .overlay {
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.55);
+  background: rgba(0, 0, 0, 0.55);
 }
 .hero-content {
   position: relative;
   z-index: 1;
-}
-.hero-content h2 {
-  font-size: 2.2rem;
 }
 .hero-content button {
   background: #ffcc00;
@@ -68,21 +62,20 @@ nav a:hover {
   border-radius: 10px;
   font-weight: bold;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: 0.3s;
 }
 .hero-content button:hover {
   transform: scale(1.1);
   background: #ffaa00;
 }
 
-/* SECTIONS */
+/* SECTION */
 .section {
   padding: 60px 20px;
   text-align: center;
 }
 .section.dark {
-  background: #001f3f;
-  color: white;
+  background: rgba(0, 0, 40, 0.8);
 }
 
 /* PAKET SERVICE */
@@ -91,84 +84,52 @@ nav a:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
-  margin-top: 20px;
 }
 .paket-card {
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
   border-radius: 15px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
   overflow: hidden;
   width: 270px;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: 0.3s;
 }
 .paket-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
 }
 .paket-card img {
   width: 100%;
   height: 180px;
   object-fit: cover;
 }
-.price {
-  color: #004aad;
-  font-weight: bold;
-  display: block;
-  margin-top: 10px;
-}
 
-/* FORM KONTAK */
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 12px;
-}
-form input, form select, form textarea {
-  width: 80%;
-  padding: 10px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
-}
-form button {
-  background: #004aad;
+/* FORM & BUTTONS */
+.form-btn, .wa-btn, .maps-btn {
+  display: inline-block;
+  margin: 15px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  text-decoration: none;
   color: white;
-  border: none;
-  padding: 10px 25px;
-  border-radius: 8px;
-  cursor: pointer;
   font-weight: bold;
   transition: 0.3s;
 }
-form button:hover {
-  background: #0073e6;
-  transform: scale(1.05);
-}
-
-/* MAPS LINK */
-.maps-link {
-  display: inline-block;
-  margin-top: 10px;
-  background: #00b894;
-  color: white;
-  padding: 8px 14px;
-  border-radius: 10px;
-  text-decoration: none;
-  transition: background 0.3s;
-}
-.maps-link:hover {
-  background: #009874;
-}
+.form-btn { background: #ffcc00; color: #000; }
+.form-btn:hover { background: #ffaa00; }
+.wa-btn { background: #25D366; }
+.wa-btn:hover { background: #1DA851; }
+.maps-btn { background: #0073e6; }
+.maps-btn:hover { background: #005bb5; }
 
 /* TEAM */
 .team-list p {
-  background: #f0f3ff;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
   margin: 8px auto;
   padding: 10px 20px;
   border-radius: 8px;
   width: fit-content;
-  transition: transform 0.3s;
+  transition: 0.3s;
 }
 .team-list p:hover {
   transform: scale(1.05);
@@ -178,8 +139,7 @@ form button:hover {
 /* FOOTER */
 footer {
   text-align: center;
-  background: #002c6c;
-  color: white;
+  background: rgba(0, 44, 108, 0.9);
   padding: 15px;
   font-size: 0.9rem;
 }
@@ -187,24 +147,14 @@ footer {
 /* ANIMATIONS */
 .fade-in, .fade-up {
   opacity: 0;
-  animation: fadeIn 1.5s forwards;
-}
-@keyframes fadeIn {
-  to { opacity: 1; transform: none; }
+  transform: translateY(40px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  nav li {
-    display: block;
-    margin: 10px 0;
-  }
   .paket-list {
     flex-direction: column;
     align-items: center;
-  }
-  .hero-content h2 {
-    font-size: 1.5rem;
-    padding: 0 10px;
   }
 }
